@@ -1,0 +1,6 @@
+The most widely used simple media players are VLC and Windows Media Player. 
+The problem with these are they are lacking essential features. VLC's playlist does not
+allow one to tag or rate tracks and is unintuitive to use. The interface and skins
+are also said be unaesthetic. Windows Media Player supports only MP3 and Windows formats and has limited
+options for sound quality. With our application we will aim to rectify these issues producing a Media Player
+that's easy to use, supports a wide variety of formats and is visually pleasing. 
