@@ -1,0 +1,26 @@
+/*dark green - #0e3e26 */
+/*light green for button - rgb(104, 169, 46) */
+.bg-color {
+    background-color:#0e3e26;
+}
+
+/*Color loading for text specific to this applcation*/
+div {
+    color : white;
+}
+
+p {
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+.bank-button {
+    background-color : rgb(104, 169, 46);
+    color:white;
+    border-color:rgb(75, 169, 75);
+    border-width: 0.25em;
+}
+    
