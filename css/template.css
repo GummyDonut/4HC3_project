@@ -13,7 +13,7 @@ p {
     color: white;
 }
 
-h1 {
+h1,h2,h3,h4,h5,h6 {
     color: white;
 }
 
@@ -34,4 +34,18 @@ input[type=textfield]{
     background-color: rgb(46, 169, 90);
     border-color: rgb(89, 158, 27);
     color: white;
+}
+
+/* Bank Numpad */
+table.bank-numpad tr td {
+    border: none;
+}
+
+table.bank-numpad tr td button {
+    font-size:22px;
+    width : 100%;
+}
+
+div.bank-numpad-row {
+    margin-top:3em;
 }
