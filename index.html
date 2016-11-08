@@ -10,24 +10,26 @@
 </head>
 <body class="bg-color">
     <!-- Your stuff goes here -->
-    <div style="height:6em;background-color:#035825;">
-        <h2 style="margin:0;">EverGreen Bank</h2> 
+    <div style="text-align:right;"> 
+        <img style="margin-top:1em; margin-right:1em; width:50px; height:50px;" src="images/logo.PNG"></img> 
     </div>
-    <div style="margin-top:8%;" class="row">
+    <div style="margin-top:4%;" >
+        <h2 class="text-center">Please enter in your 16 digit account number: </h2>
+    </div>
+    <div> 
         <div class="col-xs-2"></div>
         <div class="col-xs-8 text-center">
 
             <!-- Account Number  -->
             <div class="row">
                 <div class="col-xs-12">
-                    <h3 style="display:inline;">Account Number : </h3>
                     <input style="display:inline; font-size:20px;" class="accountNumInput" type="textfield"></input>
                 </div>
             </div>
 
             <!-- Numpad -->
-            <div style="margin-left:-2.5em;" class="bank-numpad-row row">
-               <div class="col-xs-3"></div>
+            <div style="margin-left:-4.5em;" class="bank-numpad-row row">
+               <div class="col-xs-3 "></div>
                <div class="col-xs-5 text-center">
                     <table class="table bank-numpad">
                         <tr>
@@ -53,27 +55,29 @@
 
                     </table>
                </div>
-               <div class="col-xs-2 text-center">
+               <div class="col-xs-3 text-center">
                     <table class="table bank-numpad">
                         <tr>
-                            <td><button class="cancel-button forward bank-button">Cancel</button></td>
+                            <td><button class="cancel-button forward bank-button"><span style="font-size:80%;" class="glyphicon glyphicon-remove"></span> Cancel</button></td>
                         </tr>
                         <tr>
-                            <td><button class="delete-button forward bank-button">Delete</button></td>
+                            <td><button class="correction-button forward bank-button"><span style="font-size:80%;" class="glyphicon glyphicon-chevron-left"></span>Correction</button></td>
                         </tr>
                         <tr>
-                            <td><button class="enter-button forward bank-button">Enter</button></td>
+                            <td><button class="enter-button forward bank-button"><span style="font-size:80%;" >O</span> Enter</button></td>
                         </tr>
-    <tr>
-                                <td><button class="clear-button forward bank-button">Clear</button></td>
-                            </tr>
+                        <tr>
+                                <td><button class="clear-button forward bank-button"><span style="font-size:80%;" class="glyphicon glyphicon-backward"></span> Clear</button></td>
+                        </tr>
                     </table>
                </div>
             </div>
             <div style="margin-top:2em;" class="row">
                 <button style="font-size: 22px; background-color:blue; border-color:blue;" class="forward bank-button">Insert Card Instead</button>
             </div> 
-        </div>
+            <div class="footer">
+                <h4>&copy; EverGreen Bank</h4>
+            </div>
     </div>
    
     
