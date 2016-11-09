@@ -1,43 +1,4 @@
 
-<style>
-
-p {
-    font-size: 500%;
-}
-
-
-b {
-    font-size: 300%;
-}
-
-
-
-
-button.bank-button{
-    border-width: 1em;
-}
-
-#test {
-    margin-top: 10%;
-}
-#logout {
-    <!-- margin-bottom: 100%; -->
-    <!-- position: relative; -->
-    <!-- bottom: 0; -->
-    color: red;
-}
-
-</style>
-<!-- <div class="container"> -->
-<!--   <h2>Button Sizes</h2> -->
-<!--   <button type="button" class="btn btn-primary btn-lg"><p>Large</p></button> -->
-<!--   <button type="button" class="btn btn-primary btn-lg"><p>Large</p></button></br><br> -->
-<!--   <button type="button" class="btn btn-primary btn-lg"><p>Large</p></button> -->
-<!--   <button type="button" class="btn btn-primary btn-lg"><p>Large</p></button> -->
-<!-- </div> -->
-
-
-
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -48,38 +9,64 @@ button.bank-button{
         <link rel="stylesheet" href="css/jquery-ui.min.css">
         <script src="js/jquery-ui.min.js"></script>
     </head>
+
+    <style>
+    p {
+    font-size: 200%;
+    }
+    
+    .table.bank-numpad {
+    margin-top: 5%;
+    }
+
+    tr {
+        margin-bottom: 0.5em;
+    }
+
+    button.bank-button{
+    border-width: 1em;
+    }
+    
+    
+    </style>
+
     <body class="bg-color">
 
 
+    <div style="text-align:right;"> 
+        <img style="margin-top:1em; margin-right:1em; width:50px; height:50px;" src="images/logo.PNG"></img> 
+    </div>
+    <div style="margin-top:4%;" >
+        <h2 class="text-center"style="font-size:300%">What would you like to do today? </h2>
+    </div>
+ <table class="table bank-numpad">
+     
+                        <tr>
+                            <td><button class="forward bank-button"><p>Withdraw</p></button></td>
+                            <td><button class="forward bank-button"><p>Deposit</p></button></td>
+                        </tr>
 
 
+                        <tr>
+                        </tr>
+                        <tr>
+                            <td><button class="forward bank-button"><p>Balance</p></button></td>
+                            <td><button class="forward bank-button"><p>Transfer</p></button></td>
+                        </tr>
+                        <tr>
+                        </tr>
 
 
-        <!-- Your stuff goes here -->
-        <center><div id="test">
-            <button id="withdraw" class="forward bank-button"><p>Withdraw</p></button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    </table>
 
-            <button class="forward bank-button"><p>Deposit&nbsp&nbsp</p> </button><br><br><br>
+            <div class="footer" style="margin-top:6em">
+                <div class="col-xs-4" style="text-align:left;font-size:150%"><button class="back bank-button" style="background-color:red;border-color:#C10505;width:50%;border-width:0.5em" ><b><span style="font-size:100%;" class="glyphicon glyphicon-step-backward"></span>Logout</b></logout></div>
+                <div class="col-xs-4"><h4>&copy; EverGreen Bank</h4></div>
+            </div>
 
-            <button class="forward bank-button"><p>Balance &nbsp</p> </button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
-            <button class="forward bank-button"><p>Transfer&nbsp</p></button>
-        </div></center>
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div id="logout ">
-            <button class="back bank-button" style="background-color:red;border-color:#C10505;" ><b>Logout&nbsp</b></logout>
-        </div>
-        <script>
-            $("#withdraw").click(function(){
-                var url = location.href;
-                var base = url.substring(0, url.lastIndexOf("/"));
-                window.location = base + "/index.html";
-
-            });
-        </script>
     </body>
+
+    <script src="js/template/template.js"></script>
+</html>
+
+
