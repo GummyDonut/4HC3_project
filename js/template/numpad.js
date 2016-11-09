@@ -30,3 +30,7 @@ $("button.clear-button").on("click", function(){
 // disable typing in the input field
 $("input.accountNumInput").prop("disabled", true);
 
+// disable enter & button on start
+$("button.enter-button").prop("disabled", true);
+
+
