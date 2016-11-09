@@ -57,13 +57,11 @@ button.bank-button{
 
         <!-- Your stuff goes here -->
         <center><div id="test">
-            <button class="forward bank-button"><p>Withdraw</p></button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
+            <button id="withdraw" class="forward bank-button"><p>Withdraw</p></button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
             <button class="forward bank-button"><p>Deposit&nbsp&nbsp</p> </button><br><br><br>
 
             <button class="forward bank-button"><p>Balance &nbsp</p> </button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-
 
             <button class="forward bank-button"><p>Transfer&nbsp</p></button>
         </div></center>
@@ -74,5 +72,14 @@ button.bank-button{
         <br>
         <br>
         <div id="logout ">
-            <button class="back bank-button" style="background-color:red;border-color:#C10505;" ><b>Logout&nbsp</b></logout></div>
+            <button class="back bank-button" style="background-color:red;border-color:#C10505;" ><b>Logout&nbsp</b></logout>
+        </div>
+        <script>
+            $("#withdraw").click(function(){
+                var url = location.href;
+                var base = url.substring(0, url.lastIndexOf("/"));
+                window.location = base + "/index.html";
+
+            });
+        </script>
     </body>
