@@ -4,7 +4,7 @@ buttonforward.volume = 0.1;
 
 // sound for correction buttons
 var buttonback = new Audio('sounds/back.mp3');
-uttonback.volume = 0.3;
+buttonback.volume = 0.3;
 
 // play sound when button is clicked
 $("button.forward.bank-button").on("click", function(){
