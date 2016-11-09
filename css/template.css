@@ -43,15 +43,15 @@ button.bank-button.cancel-button {
 }
 
 button.bank-button.correction-button {
-    background-color:yellow;
-    border-color:yellow;
-    color:grey;
+    background-color:orange;
+    border-color:orange;
+    color:white;
     width:80%;
 }
 
 button.bank-button.clear-button {
-    background-color:orange;
-    border-color:orange;
+    background-color:red;
+    border-color:red;
     width:80%;
 }
 
