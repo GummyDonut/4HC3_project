@@ -16,3 +16,6 @@ $("button.back.bank-button").on("click", function(){
     buttonback.play();
 });
 
+// clear input on start
+$("input.accountNumInput").val("");
+
