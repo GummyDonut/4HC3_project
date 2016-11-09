@@ -8,13 +8,52 @@
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <script src="js/jquery-ui.min.js"></script>
 </head>
+
+<style>p {
+    font-size: 200%;
+    }
+    </style>
 <body class="bg-color">
+
+<div class="col-xs-6">
+
+                    <table class="table bank-numpad" style="margin-top:40%">
+                        <tr>
+                            <td><button class="forward bank-button"><p>Chequing</p></button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="forward bank-button"><p>Saving</p></button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="forward bank-button"><p>Credit</p></button></td>
+                        </tr>
+
+
+                    </table>
+
+
+    </div>
+
+    <style>
+.vr {
+    width:10px;
+    background-color:#000;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:650px;
+}
+</style>
+<div class="vr">
+</div>
+
+<div class="col-xs-6">
     <!-- Your stuff goes here -->
     <div style="text-align:right;"> 
         <img style="margin-top:1em; margin-right:1em; width:50px; height:50px;" src="images/logo.PNG"></img> 
     </div>
     <div style="margin-top:4%;" >
-        <h2 class="text-center">Please enter the amount you are tranferring. </h2>
+        <h2 class="text-center">Please enter a custom amount. It must be a multiple of 10. </h2>
     </div>
     <div> 
         <div class="col-xs-2"></div>
@@ -29,8 +68,8 @@
 
             <!-- Numpad -->
             <div style="margin-left:-4.5em;" class="bank-numpad-row row">
-               <div class="col-xs-3 "></div>
-               <div class="col-xs-5 text-center">
+               <div class="col-xs-8 text-center">
+
                     <table class="table bank-numpad">
                         <tr>
                             <td><button class="forward bank-button">1</button></td>
@@ -52,35 +91,43 @@
                             <td><button class="forward bank-button">0</button></td>
                             <td style="width:34.35%;"><button class="forward bank-button">00</button></td>
                         </tr>
-
                     </table>
+
                </div>
-               <div class="col-xs-3 text-center">
+               <style>
+ .a .bank-button{
+
+     width: 100%
+
+
+}
+
+</style>
+<div class="a">               <div class="col-xs-4 text-center">
                     <table class="table bank-numpad">
                         <tr>
-                            <td><button class="cancel-button forward bank-button"><span style="font-size:80%;" class="glyphicon glyphicon-remove"></span> Cancel</button></td>
+                            <td><button class="cancel-button forward bank-button" style="width:120%"><span style="font-size:80%;" class="glyphicon glyphicon-remove"></span> Cancel</button></td>
                         </tr>
                         <tr>
-                            <td><button class="correction-button forward bank-button"><span style="font-size:80%;" class="glyphicon glyphicon-chevron-left"></span>Correction</button></td>
+                            <td><button class="correction-button forward bank-button" style="width:120%"><span style="font-size:80%;" class="glyphicon glyphicon-chevron-left"></span>Correction</button></td>
                         </tr>
                         <tr>
-                            <td><button class="enter-button forward bank-button"><span style="font-size:80%;" >O</span> Enter</button></td>
+                            <td><button class="enter-button forward bank-button" style="width:120%"><span style="font-size:80%;" >O</span> Enter</button></td>
                         </tr>
                         <tr>
-                                <td><button class="clear-button forward bank-button"><span style="font-size:80%;" class="glyphicon glyphicon-backward"></span> Clear</button></td>
+                                <td><button class="clear-button forward bank-button" style="width:120%"><span style="font-size:80%;" class="glyphicon glyphicon-backward"></span> Clear</button></td>
                         </tr>
                     </table>
                </div>
             </div>
 
-
-
-    </div>
-   
-            <div class="footer" style="margin-top:6em">
-                <div class="col-xs-4" style="text-align:left;font-size:150%"><button class="back bank-button" style="background-color:red;border-color:#C10505;width:50%;border-width:0.5em" ><b><span style="font-size:100%;" class="glyphicon glyphicon-step-backward"></span>Back</b></logout></div>
-                <div class="col-xs-4"><h4>&copy; EverGreen Bank</h4></div>
             </div>
+
+            <div class="footer" style="margin-top:6em">
+                <h4>&copy; EverGreen Bank</h4>
+            </div>
+    </div>
+    <div>   
     
 </body>
 
@@ -88,7 +135,6 @@
 <script src="js/template/template.js"></script>
 <script src="js/pages/renamedscript.js"></script>
 </html>
-
 
 
 
