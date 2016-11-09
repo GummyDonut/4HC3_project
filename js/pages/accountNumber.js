@@ -40,5 +40,8 @@ $("button.clear-button").on("click", function(){
 
 // enter button to validate and change page
 $("button.enter-button").on("click", function(){
-    $("h3.error-message").html();
+    var numberText = $("input.accountNumInput").val();
+    if (numberText != "1234-5678-9101-1234") {
+        $("h3.error-message").html("Invalid account number");
+    }
 });

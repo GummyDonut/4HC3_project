@@ -13,6 +13,7 @@ $("table.bank-numpad.bank-numbers button.bank-button").on('click', function(){
 
 // correction button functionality
 $("button.correction-button").on("click", function(){
+    $("h3.error-message").html("");
     var currentText = $("input.accountNumInput").val();
     var numbers = currentText.replace(/-/g,"")
     var subtract = (numbers.length % 4 == 1 && numbers.length != 1) ? 2 : 1;
@@ -22,6 +23,7 @@ $("button.correction-button").on("click", function(){
 
 // correction button functionality
 $("button.clear-button").on("click", function(){
+    $("h3.error-message").html("");
     $("input.accountNumInput").val("");
 });
 
