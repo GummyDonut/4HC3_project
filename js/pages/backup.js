@@ -31,7 +31,7 @@ $("button.bank-button:contains('Back')").on('click', function(){
     $("body").fadeOut("slow", function(){
 
         // redirect page to new one
-        var page = "/mainMenu.html";
+        var page = "/withdrawAccount.html";
         var url = location.href;
         var base = url.substring(0, url.lastIndexOf("/"));
         window.location = base + page;
