@@ -1,4 +1,10 @@
 // disable . & 00 button
+if(!localStorage.getItem("group_6_zayan_is_awesome")) {
+    
+    localStorage.clear();
+    localStorage.setItem("group_6_zayan_is_awesome", "1");
+}
+
 $("button:contains('.')").prop("disabled", true);
 $("button:contains('00')").prop("disabled", true);
 
