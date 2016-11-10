@@ -1,5 +1,6 @@
-$("button.bank-button:contains('10')").on('click', function(){
 
+$("button.bank-button.ten").on('click', function(){
+    withdraw(10);
     $("body").fadeOut("slow", function(){
 
         // redirect page to new one
@@ -13,7 +14,7 @@ $("button.bank-button:contains('10')").on('click', function(){
 });
 
 $("button.bank-button:contains('20')").on('click', function(){
-
+    withdraw(20);
     $("body").fadeOut("slow", function(){
 
         // redirect page to new one
@@ -28,6 +29,7 @@ $("button.bank-button:contains('20')").on('click', function(){
 
 $("button.bank-button:contains('30')").on('click', function(){
 
+    withdraw(30);
     $("body").fadeOut("slow", function(){
 
         // redirect page to new one
@@ -41,7 +43,7 @@ $("button.bank-button:contains('30')").on('click', function(){
 });
 
 $("button.bank-button:contains('50')").on('click', function(){
-
+    withdraw(50);
     $("body").fadeOut("slow", function(){
 
         // redirect page to new one
@@ -55,7 +57,7 @@ $("button.bank-button:contains('50')").on('click', function(){
 });
 
 $("button.bank-button:contains('100')").on('click', function(){
-
+    withdraw(100);
     $("body").fadeOut("slow", function(){
 
         // redirect page to new one

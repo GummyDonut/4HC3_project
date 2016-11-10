@@ -1,5 +1,5 @@
 $("button.bank-button:contains('Saving')").on('click', function(){
-
+    localStorage.setItem("currentBalance", "savings");
     $("body").fadeOut("slow", function(){
 
         // redirect page to new one
@@ -13,7 +13,7 @@ $("button.bank-button:contains('Saving')").on('click', function(){
 });
 
 $("button.bank-button:contains('Chequing')").on('click', function(){
-
+    localStorage.setItem("currentBalance", "chequing");
     $("body").fadeOut("slow", function(){
 
         // redirect page to new one
