@@ -147,9 +147,14 @@
         $("div.savings").fadeToggle("fast");
         $("div.chequing").fadeToggle("fast");
     });
-    
-    $("a.paginate_button.disabled").css({"background-color" : "grey", "color":"white", "opacity" :0.3});
-    $("a.paginate_button.current").css({"background-color" : "grey", "color":"white", "opacity" :0.3});
-    $("a.paginate_button").css({"background-color" : "green", "color":"white"});
+    function cssapply() { 
+        $("a.paginate_button.disabled").css({"background-color" : "grey", "color":"white", "opacity" :0.3});
+        $("a.paginate_button.current").css({"background-color" : "grey", "color":"white", "opacity" :0.3});
+        $("a.paginate_button").css({"background-color" : "green", "color":"white"});
+    }
+    cssapply();
+    $("a.paginate_button").on('click', function(){
+        cssapply();
+    });
     </script>
 </html>
