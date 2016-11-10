@@ -21,12 +21,32 @@
             table, th, td{
                 border: 2px solid white;
        white;
-            button.bank-button {
-                color:white;
-            }
+           } 
             button:disabled {
                 opacity:0.3;
+            } 
+            a.paginate_button:disabled{
+                background-color : grey;
+                color:white;
+                opacity :0.3;
             }
+            a.paginate_button:hover{
+                background-color : green;
+                color:white;
+            }
+            a.paginate_button.current {
+                background-color : grey;
+                color:white; 
+                opacity :0.3;
+            }
+            a.paginate_button {
+                background-color : green;
+                color:white;
+            }
+            button.back.bank-button {
+                color : white;
+            }
+        
         </style>
     </head>
     <body class="bg-color">
@@ -151,10 +171,8 @@
         $("div.chequing").fadeToggle("fast");
     });
     function cssapply() { 
-        $("a.paginate_button.disabled").css({"background-color" : "grey", "color":"white", "opacity" :0.3});
-        $("a.paginate_button.current").css({"background-color" : "grey", "color":"white", "opacity" :0.3});
-        $("a.paginate_button").css({"background-color" : "green", "color":"white"});
-    }
+        $("a.paginate_button.disabled").css();
+            }
     cssapply();
     $("a.paginate_button").on('click', function(){
         cssapply();
