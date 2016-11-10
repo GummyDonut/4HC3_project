@@ -15,14 +15,27 @@
             td, p, h1, h2, h3, h4, h5, label {
                 color:white;
             }
-            #balance-table tbody, #balance-table tr {
-                background-color:transparent;
+            table tbody, table tr{
+                background-color:transparent !important;
             }
         </style>
     </head>
     <body class="bg-color">
         <!-- Your stuff goes here -->
-        <table class="table" id="balance-table">
+        <h2 class="text-center"><b>Account Balance</b></h2>
+        <h3>Chequing</h3>
+        <table class="table chequing">
+            <thead>
+                <tr>
+                    <td>Date</td>
+                    <td>Description</td>
+                    <td>Amount</td>
+                    <td>Balance</td>
+                </tr>
+            </thead>
+        </table>
+        <h3>Saving</h3>
+        <table class="table saving">
             <thead>
                 <tr>
                     <td>Date</td>
@@ -37,7 +50,7 @@
     <!-- Pass your script here -->   
     <script src="js/template/template.js"></script>
     <script>
-       var dataTable =  $("#balance-table").DataTable({
+       var dataTable =  $(".table.chequing").DataTable({
             "searching" : false,
             "lengthChange" : false,
             "columns" : [
@@ -55,7 +68,30 @@
                 }
             ]
        }); 
-
+       var dataTable =  $(".table.saving").DataTable({
+            "searching" : false,
+            "lengthChange" : false,
+            "columns" : [
+                {"data": "Date"},
+                {"data": "Description"},
+                {"data": "Amount"},
+                {"data": "Balance"},
+            ],
+            "data" : [
+                {
+                    "Date" : "test",
+                    "Description" : "test",
+                    "Amount" : "test",
+                    "Balance" : "test"
+                },
+                {
+                    "Date" : "test",
+                    "Description" : "test",
+                    "Amount" : "test",
+                    "Balance" : "test"
+                }
+            ]
+       }); 
        // make parts white
        $('div.dataTables_info').css("color", "white");
     </script>
