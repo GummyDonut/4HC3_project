@@ -21,7 +21,7 @@ $("button.bank-button:contains('Yes')").on('click', function(){
             $("#receipt").append("Action : " +  transaction["Description"] + "<br>");
             $("#receipt").append("Amount : " +  transaction["Amount"] + "<br>");
             $("#receipt").append("Balance : " +  transaction["Balance"] + "<br>");
-            $("#ok-row").append("<button id='ok' class='bank-button'>OK</button>");
+            $("#ok-row").append("<button style='font-size:580%;border-width:0.5em;' id='ok' class='bank-button'>OK</button>");
             $("#ok").on('click', function(){
 
         $("div").fadeOut("slow", function(){

@@ -37,8 +37,7 @@ $("button.bank-button:contains('Enter')").on('click', function(){
     withdraw(parseInt($("input.accountNumInput").val()));
     $("body").fadeOut("slow", function(){
         
-        var deposit = (localStorage.getItem("deposit") == "cash") ? "evelope" : "cheque";
-        $("html").prepend("<img style='margin-left:40%' src='images/" + deposit + ".gif'></img>");
+        $("html").prepend("<img style='margin-left:40%' src='images/Money-withdraw.gif'></img>");
         window.setTimeout(function(){
             // redirect page to new one
             var page = "/printReceipt.html";
