@@ -1,3 +1,7 @@
+function retr_dec(num) {
+  return (num.split('.')[1] || []).length;
+  }
+
 
 $("button.enter-button").prop("disabled", true);
 
@@ -8,17 +12,24 @@ $("table.bank-numpad.bank-numbers button.bank-button").on('click', function(){
     var value = $(this).text();    
     var inputText = $("input.accountNumInput").val();
     $("input.accountNumInput").val(inputText + value);
+    if(retr_dec($("input.accountNumInput").val()) >= 1)
+        $("table.bank-numpad.bank-numbers button.bank-button:contains('00')").prop("disabled", true);
+    if(retr_dec($("input.accountNumInput").val()) >= 2)
+        $("table.bank-numpad.bank-numbers button.bank-button").prop("disabled", true);
+
     $("button.enter-button").prop("disabled", false);
 });
 
 
 $("button.correction-button").on("click", function(){
+    $("table.bank-numpad.bank-numbers button.bank-button").prop("disabled", false);
     if($("input.accountNumInput").val().length == 0)
         $("button.enter-button").prop("disabled", true);
 });
 
 
 $("button.clear-button").on("click", function(){
+    $("table.bank-numpad.bank-numbers button.bank-button").prop("disabled", false);
     $("button.enter-button").prop("disabled", true);
 });
 
