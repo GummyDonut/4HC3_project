@@ -12,7 +12,8 @@ $("button.bank-button:contains('Yes')").on('click', function(){
             "<div id='ok-row' class='text-center row'></div>"
             );
             var current = localStorage.getItem("currentBalance");
-            var transaction = JSON.parse(localStorage.getItem("transactions"))[0];
+            var jsonTop =  JSON.parse(localStorage.getItem("transactions"));
+            var transaction = jsonTop[jsonTop.length -1];
             $("#receipt").append("Receipt <br>");
             $("#receipt").append("Date : " +  new Date() + "<br>");
             $("#receipt").append("Account Number : " +  "1234-****-****-3456" + "<br>");
