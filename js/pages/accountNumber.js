@@ -41,6 +41,10 @@ $("button.clear-button").on("click", function(){
 
 });
 
+$("button.enter-button").on("click", function(){
+
+});
+
 // enter button to validate and change page
 $("button.enter-button").on("click", function(){
     var numberText = $("input.accountNumInput").val();

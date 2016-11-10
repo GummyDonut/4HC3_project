@@ -56,3 +56,15 @@ $("button.enter-button").on("click", function(){
         });
     }
 });
+
+// enter button to validate and change page
+$("button.bank-button:contains('Back')").on("click", function(){
+    $("body").fadeOut("slow", function(){
+
+        // redirect page to new one
+        var page = "/index.html";
+        var url = location.href;
+        var base = url.substring(0, url.lastIndexOf("/"));
+        window.location = base + page;
+    });
+});

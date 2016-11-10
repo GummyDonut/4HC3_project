@@ -13,9 +13,17 @@ if(!localStorage.getItem("transactions"))  {
     var transactions = JSON.stringify([
         {
             "Date": new Date(),
-            "Description" : "Made Account",
+            "Description" : "Made Chequing Account",
             "Amount" : 1000,
             "Balance": 1000,
+            "type" : "chequing"
+        },
+        {
+            "Date": new Date(),
+            "Description" : "Made Savings Account",
+            "Amount" : 500,
+            "Balance": 500,
+            "type" : "savings"
         }
     ]);
     localStorage.setItem("transactions", transactions);
