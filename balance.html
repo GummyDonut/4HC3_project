@@ -95,6 +95,7 @@
        var dataTable =  $(".table.chequing").DataTable({
             "searching" : false,
             "lengthChange" : false,
+            "pageLength" : 5,
             "columns" : [
                 {"data": "Date"},
                 {"data": "Description"},
@@ -107,6 +108,7 @@
        var dataTable =  $(".table.saving").DataTable({
             "searching" : false,
             "lengthChange" : false,
+            "pageLength" : 5,
             "columns" : [
                 {"data": "Date"},
                 {"data": "Description"},
@@ -136,15 +138,18 @@
     $("#cheque-button").on("click", function(){
         $(this).prop("disabled", true);        
         $("#saving-button").prop("disabled", false);
-        $("div.savings").fadeToggle("slow");
-        $("div.chequing").fadeToggle("slow");
+        $("div.savings").fadeToggle("fast");
+        $("div.chequing").fadeToggle("fast");
     });
     $("#saving-button").on("click", function(){
         $(this).prop("disabled", true);        
         $("#cheque-button").prop("disabled", false);
-        $("div.savings").fadeToggle("slow");
-        $("div.chequing").fadeToggle("slow");
+        $("div.savings").fadeToggle("fast");
+        $("div.chequing").fadeToggle("fast");
     });
-
+    
+    $("a.paginate_button.disabled").css({"background-color" : "grey", "color":"white", "opacity" :0.3});
+    $("a.paginate_button.current").css({"background-color" : "grey", "color":"white", "opacity" :0.3});
+    $("a.paginate_button").css({"background-color" : "green", "color":"white"});
     </script>
 </html>
