@@ -1,7 +1,6 @@
 $("button.bank-button:contains('Cheque')").on('click', function(){
-    localStorage.setItem("currentBalance", "savings");
+    localStorage.setItem("deposit", "cheque");
     $("body").fadeOut("slow", function(){
-    	localStorage.setItem("depositType", "Cheque");
         // redirect page to new one
         var page = "/depositAmount.html";
         var url = location.href;
@@ -13,9 +12,8 @@ $("button.bank-button:contains('Cheque')").on('click', function(){
 });
 
 $("button.bank-button:contains('Cash')").on('click', function(){
-    localStorage.setItem("currentBalance", "chequing");
+    localStorage.setItem("deposit", "cash");
     $("body").fadeOut("slow", function(){
-    	localStorage.setItem("depositType", "Cash");
         // redirect page to new one
         var page = "/depositAmount.html";
         var url = location.href;

@@ -36,12 +36,16 @@ $("button.clear-button").on("click", function(){
 $("button.bank-button:contains('Enter')").on('click', function(){
     withdraw(parseInt($("input.accountNumInput").val()));
     $("body").fadeOut("slow", function(){
-
-        // redirect page to new one
-        var page = "/printReceipt.html";
-        var url = location.href;
-        var base = url.substring(0, url.lastIndexOf("/"));
-        window.location = base + page;
+        
+        var deposit = (localStorage.getItem("deposit") == "cash") ? "evelope" : "cheque";
+        $("html").prepend("<img style='margin-left:40%' src='images/" + deposit + ".gif'></img>");
+        window.setTimeout(function(){
+            // redirect page to new one
+            var page = "/printReceipt.html";
+            var url = location.href;
+            var base = url.substring(0, url.lastIndexOf("/"));
+            window.location = base + page;
+        }, 3000);
     });
 
 });
