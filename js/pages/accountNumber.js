@@ -5,6 +5,13 @@ $("button:contains('00')").prop("disabled", true);
 // enable the enter button when there is sixteen letters
 // also disable all numpad options
 $("table.bank-numpad.bank-numbers button.bank-button").on('click', function(){
+    // Get the value for the button
+    var value = $(this).text();    
+    var inputText = $("input.accountNumInput").val();
+    var numbers = inputText.replace(/-/g,"");
+    var dash = (numbers.length % 4 == 0 && inputText.length != 0) ? "-" : "";
+    $("input.accountNumInput").val(inputText + dash + value);
+
     var numbers = $("input.accountNumInput").val().replace(/-/g, "");
     if (numbers.length == 16) {
         $("button.enter-button").prop("disabled", false);

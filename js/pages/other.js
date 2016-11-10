@@ -1,13 +1,47 @@
-$("button.bank-button:contains('Enter')").on('click', function(){
+$("button:contains('.')").prop("disabled", true);
+$("button:contains('00')").prop("disabled", true);
 
+// enable the enter button when there is four letters
+// also disable all numpad options
+$("table.bank-numpad.bank-numbers button.bank-button").on('click', function(){
+    // Get the value for the button
+    var value = $(this).text();    
+    var inputText = $("input.accountNumInput").val();
+    $("input.accountNumInput").val(inputText + value);
+
+    var numbers = $("input.accountNumInput").val();
+    if (numbers.endsWith("0")) {
+        $("button.enter-button").prop("disabled", false);
+    } else
+        $("button.enter-button").prop("disabled", true);
+});
+
+// disable the enter button when less than 16 numbers
+// reenable buttons
+$("button.correction-button").on("click", function(){
+    var numbers = $("input.accountNumInput").val()
+    if (!numbers.endsWith("0")) {
+        $("button.enter-button").prop("disabled", true);
+    } else {
+        $("button.enter-button").prop("disabled", false);
+    }
+});
+
+// disable button on clear
+$("button.clear-button").on("click", function(){
+    $("button.enter-button").prop("disabled", true)
+    $("table.bank-numpad.bank-numbers button.bank-button").prop("disabled", false);
+});
+
+$("button.bank-button:contains('Enter')").on('click', function(){
+    withdraw(parseInt($("input.accountNumInput").val()));
     $("body").fadeOut("slow", function(){
 
         // redirect page to new one
-        var page = "/mainMenu.html";
+        var page = "/printReceipt.html";
         var url = location.href;
         var base = url.substring(0, url.lastIndexOf("/"));
         window.location = base + page;
-
     });
 
 });

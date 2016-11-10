@@ -5,6 +5,11 @@ $("button:contains('00')").prop("disabled", true);
 // enable the enter button when there is four letters
 // also disable all numpad options
 $("table.bank-numpad.bank-numbers button.bank-button").on('click', function(){
+    // Get the value for the button
+    var value = $(this).text();    
+    var inputText = $("input.accountNumInput").val();
+    $("input.accountNumInput").val(inputText + value);
+
     var numbers = $("input.accountNumInput").val();
     if (numbers.length == 4) {
         $("button.enter-button").prop("disabled", false);
