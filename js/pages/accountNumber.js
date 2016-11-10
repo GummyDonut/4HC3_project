@@ -43,14 +43,14 @@ $("button.clear-button").on("click", function(){
 
 $("#card-button").on("click", function(){
     $("body").fadeOut("slow", function(){
-        $("html").prepend("<img style='margin-left:40%' src='images/card.gif'></img>");
+        $("html").prepend("<img style='margin-left:40%' src='images/swipe.gif'></img>");
         window.setTimeout(function(){
             // redirect page to new one
             var page = "/pin.html";
             var url = location.href;
             var base = url.substring(0, url.lastIndexOf("/"));
             window.location = base + page;
-        }, 2500);
+        }, 1200);
     });
 });
 
